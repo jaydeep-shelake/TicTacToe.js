@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@600&family=Varela+Round&display=swap');
+
+*, *::after, *::before {
+    box-sizing: border-box;
+  }
+  
+  :root {
+    --cell-size: 100px;
+    --mark-size: calc(var(--cell-size) * .9);
+  }
+  
+  body {
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+    font-family: 'Varela Round', sans-serif;
+  }
+  
+  .board {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(3, auto);
+    position: relative;
+    background: rgb(46, 45, 45);
+  }
+  
+  .cell {
+    width: var(--cell-size);
+    height: var(--cell-size);
+    border: 2px solid rgb(25, 99, 128);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    font-size: 1.6rem;
+  }
+  .cell.playerO{
+    color: rgb(116, 196, 228);
+  }
+  .cell.cell.playerX{
+    color: #fff;
+  }
+  .cell:first-child,
+  .cell:nth-child(2),
+  .cell:nth-child(3) {
+    border-top: none;
+  }
+  
+  .cell:nth-child(3n + 1) {
+    border-left: none;
+  }
+  
+  .cell:nth-child(3n + 3) {
+    border-right: none;
+  }
+  
+  .cell:last-child,
+  .cell:nth-child(8),
+  .cell:nth-child(7) {
+    border-bottom: none;
+  }
+  
+  .cell.x,
+  .cell.circle {
+    cursor: not-allowed;
+  }
+  
+  .cell.x::before,
+  .cell.x::after,
+  .cell.circle::before {
+    background-color: black;
+  }
+  .winning-message{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.583);
+    display: none;
+  }
+  .card{
+    width: 240px;
+    height: 260px;
+    border-radius: 8px;
+    background: #fff;
+    padding: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  button{
+    background: #333;
+    color: white;
+    font-size: 1.1rem;
+    padding: 0.6rem 1rem;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+  }
+  
+  
