@@ -78,5 +78,5 @@ function endGame(draw){
 
 
 restartButton.addEventListener('click',()=>{
- window.location.reload()
+ location.reload()
 });
