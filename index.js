@@ -3,6 +3,7 @@ const playerO='playerO';
 const playerX='playerX';
 const modal= document.getElementById('modal');
 const modalMsg=document.getElementById('modal-msg');
+const restartButton = document.getElementById('restartButton');
 let currentPlayer;
 
 let currentClass;
@@ -76,3 +77,6 @@ function endGame(draw){
 }
 
 
+restartButton.addEventListener('click',()=>{
+ window.location.reload()
+});
