@@ -71,7 +71,7 @@ function endGame(draw){
     }
     else{
      console.log(currentClass,'wins');
-     modalMsg.innerHTML=`<h1 style="color:green;">${currentClass}<span style="color:#333;">wins!</span><h1>`
+     modalMsg.innerHTML=`<h1 style="color:green;">${currentClass}<span style="color:#333;"> wins!</span><h1>`
      modal.style.display='flex';
     }
 }
